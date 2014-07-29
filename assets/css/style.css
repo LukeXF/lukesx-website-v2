@@ -1,0 +1,436 @@
+/*
+    Author   :      Luke Brown
+    Website  :      http://luke.sx
+    Created  :      July 2014
+    Contact  :      me@luke.sx
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+
+
+/* ////////////////////////////////////////////////////////////////
+/*                      MAIN NAVBAR SETTINGS
+/* ///////////////////////////////////////////////////////////// */
+
+* {
+  text-decoration:none;
+}
+nav {
+color: #FFF;
+font-family: Oswald,sans-serif;
+padding: 15px;
+margin-left: 25px;
+}
+
+/* Line of all links */
+nav ul {
+  /* Base CSS */
+  padding-top: 15px;
+  list-style:none;
+  line-height:1;
+  display:block;
+  zoom:1;
+  box-shadow: 0 0 10px #000;
+  text-decoration:none;
+
+  /* Sexy CSS */
+  background: #efefef; 
+  background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+  background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+  background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+  box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+  padding: 0 20px;
+  border-radius: 10px;  
+  list-style: none;
+  position: relative;
+  display: inline-table;
+  text-decoration:none;
+}
+
+/* Forces all links in line */
+nav ul:after {
+  content:" ";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+
+/* Forces individual links in line */
+nav ul li {
+  display:inline-block;
+  margin:0;
+  padding:0;
+  text-decoration:none;
+}
+
+nav.align-right ul li {
+  float:right;
+}
+
+nav.align-center ul {
+  text-align:center;
+}
+
+
+/* Main Link Settings */
+nav ul li a {
+  color:#fff;
+  text-decoration:none;
+  font-family:'Open Sans', sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  font-size:20px;
+  position:relative;
+  -webkit-transition:color .25s;
+  -moz-transition:color .25s;
+  -ms-transition:color .25s;
+  -o-transition:color .25s;
+  transition:color .25s;
+  padding: 25px 65px;
+  display: block;
+  color: #757575; text-decoration: none;
+}
+
+
+/* Animation */
+nav ul li a:before {
+  content:"";
+  display:block;
+  position:absolute;
+  left:0;
+  bottom:70px;
+  height:5px;
+  width:0;
+  background:#999;
+  -webkit-transition:width .25s;
+  -moz-transition:width .25s;
+  -ms-transition:width .25s;
+  -o-transition:width .25s;
+  transition:width .25s;
+}
+
+
+/* Forces last icons to align correctly */
+nav.align-right li.last > a:after,nav.align-right li:last-child > a:after {
+  display:block;
+}
+
+/* Active Link */
+nav ul li a:hover,nav ul li.active a {
+  color:#999;
+  text-decoration:none;
+}
+
+/* Hover Settings */
+nav ul li a:hover:before,nav ul li.active a:before {
+  width:100%;
+  text-decoration:none;
+}
+
+/* Hide Non-Hover Display */
+nav ul li.last > a:after,nav ul li:last-child > a:after,nav.align-right li:first-child a:after {
+  display:none;
+  text-decoration:none;
+}
+
+/* Adjustments */
+@media screen and max-width 768px {
+  nav ul li {
+    float:none;
+    display:block;
+  }
+
+  /* Shadow on Links */
+  nav ul li a {
+    width:100%;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    border-bottom:1px solid #fb998c;
+  }
+
+  /* Last link clear boarder */
+  nav ul li.last > a,nav ul li:last-child > a {
+    border:0;
+  }
+
+  /* Hide stuff */
+  nav ul li a:after,nav ul li a:before {
+    display:none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////
+/*                      SUB NAVBAR SETTINGS
+/* ///////////////////////////////////////////////////////////// */
+
+
+/* Hides second level menus until hover over */
+nav ul ul {
+  display: none;
+  text-decoration:none;
+}
+
+/* Shows second level menus on hover over */
+nav ul li:hover > ul {
+  display: block;
+  text-decoration:none;
+}
+
+/* Keeps shading on sub menu links when hobvring on - sexy */
+nav ul li:hover {
+  background: #4b545f;
+  background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+  background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+  background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+  text-decoration:none;
+}
+
+/* Makes the submenu links white */
+nav ul li:hover a {
+  text-decoration:none;
+  color: #fff;
+}
+
+
+nav ul ul {
+  background: #5f6975; border-radius: 0px; padding: 0;
+  position: absolute; top: 100%;
+}
+nav ul ul li {
+  float: none; 
+  border-top: 1px solid #6b727c;
+  border-bottom: 1px solid #575f6a; position: relative;
+}
+nav ul ul li a {
+  padding: 15px 40px;
+  color: #fff;
+}   
+nav ul ul li a:hover {
+  background: #4b545f;
+}
+
+nav ul ul ul {
+  position: absolute; left: 100%; top:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////
+/*                         BACKING THEMES
+/* ///////////////////////////////////////////////////////////// */
+
+.dark {
+  background-image: url('http://chromahills.net/assets/img/backdrop.png');
+  background-size: 100%;
+  background-position: center center;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: -20vw;
+  margin-right: -20vw;
+  overflow-x: hidden;
+}
+
+.blue {
+background-color: #3686be;
+color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: -20vw;
+  margin-right: -20vw;
+  overflow-x: hidden;
+}
+
+.grey {
+  background: #5C5C5C;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: -20vw;
+  margin-right: -20vw;
+  overflow-x: hidden;
+}
+
+.white {
+  background: #fff;
+  color: #666;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: -20vw;
+  margin-right: -20vw;
+  overflow-x: hidden;
+}
+      
+  </style>
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////
+/*                         FOOTER STUFF
+/* ///////////////////////////////////////////////////////////// */
+
+footer {
+  position: fixed;
+  left: 50px;
+  bottom: 0px;
+  height: 30px;
+  width: 10%;
+}
+
+/* IE 6 */
+* html footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////
+/*                        PORTFOLIO STUFF
+/* ///////////////////////////////////////////////////////////// */
+
+
+
+
+.blue div {
+  margin: 15px;
+  float: left;
+  width: 300px;
+  border-radius: 5px;
+
+}
+
+.back {
+  max-width: 300px;
+  height: 150px;
+  box-shadow: inset 0 20px 150px #000;
+  background: rgba(0,0,0,0);
+  color: #fff;
+  font-size: 3em;
+  text-align: center;
+  
+}
+
+.back:hover:after{
+  text-shadow: #777 1px 2px;
+}
+
+.back:hover {
+  box-shadow: inset 0px 20px 220px #000;
+}
+
+/* MineReach */
+.Minereach {
+  background: url(http://test.luke.sx/LUKESITE/images/work/Minereach.png) center center ;
+  background-size: cover;
+}
+.Minereach:hover:after {
+  content: "Minereach";
+}
+
+/* FancyGamer */
+.FancyGamer {
+  background: url(http://test.luke.sx/LUKESITE/images/work/FancyGamer.png) center center no-repeat;
+  background-size: cover;
+}
+.FancyGamer:hover:after {
+  content: "FancyGamer";
+}
+
+/* SlammerMC */
+.SlammerMC {
+  background: url(http://test.luke.sx/LUKESITE/images/work/SlammerMC.png) center center no-repeat;
+  background-size: cover;
+}
+.SlammerMC:hover:after {
+  content: "SlammerMC";
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////
+/*                         FONTS & SIZING
+/* ///////////////////////////////////////////////////////////// */
+
+
+h1 {
+  color: #fff;
+  font-family: 'Lobster Two', cursive;
+  font-size: 5em;
+  text-align: center;
+}
+h2 {
+  color: #fff;
+  font-family: 'Lobster Two', cursive;
+  font-size: 2em;
+  text-align: center;
+}
+
