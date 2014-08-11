@@ -1,328 +1,222 @@
-/*
-    Author   :      Luke Brown
-    Website  :      http://luke.sx
-    Created  :      July 2014
-    Contact  :      me@luke.sx
-*/
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
 
+/* 		Overall Styling 	*/
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400);
 
-/* ////////////////////////////////////////////////////////////////
-/*                      MAIN NAVBAR SETTINGS
-/* ///////////////////////////////////////////////////////////// */
+*:hover {
+	text-decoration: none !important;
+}
+
+.left {
+	text-align: left;
+}
+
+.center, .middle {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
 
 * {
-  text-decoration:none;
-}
-nav {
-color: #FFF;
-font-family: Oswald,sans-serif;
-padding: 15px;
-margin-left: 25px;
-}
 
-/* Line of all links */
-nav ul {
-  /* Base CSS */
-  padding-top: 15px;
-  list-style:none;
-  line-height:1;
-  display:block;
-  zoom:1;
-  box-shadow: 0 0 10px #000;
-  text-decoration:none;
-
-  /* Sexy CSS */
-  background: #efefef; 
-  background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
-  background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
-  background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
-  box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
-  padding: 0 20px;
-  border-radius: 10px;  
-  list-style: none;
-  position: relative;
-  display: inline-table;
-  text-decoration:none;
-}
-
-/* Forces all links in line */
-nav ul:after {
-  content:" ";
-  display:block;
-  height:0;
-  clear:both;
-  visibility:hidden;
-}
-
-/* Forces individual links in line */
-nav ul li {
-  display:inline-block;
-  margin:0;
-  padding:0;
-  text-decoration:none;
-}
-
-nav.align-right ul li {
-  float:right;
-}
-
-nav.align-center ul {
-  text-align:center;
+	font-family: 'Lato', sans-serif;
 }
 
 
-/* Main Link Settings */
-nav ul li a {
-  color:#fff;
-  text-decoration:none;
-  font-family:'Open Sans', sans-serif;
-  font-weight:700;
-  text-transform:uppercase;
-  font-size:20px;
-  position:relative;
-  -webkit-transition:color .25s;
-  -moz-transition:color .25s;
-  -ms-transition:color .25s;
-  -o-transition:color .25s;
-  transition:color .25s;
-  padding: 25px 65px;
-  display: block;
-  color: #757575; text-decoration: none;
+
+/* 		Name Top Styling 	*/
+.top {
+	color: #fff;
+	background: url(../img/top.gif) no-repeat;
+	text-align: center;
+}
+
+.bottom {
+	color: #fff;
+	background: url(../img/top.gif) center center no-repeat;
+	min-height: 150px;
+	text-align: center;
+	margin-bottom: -1px;
+}
+
+.bottom > div > div > div > h3 {
+	border: 2px solid white;
+	border-radius: 4px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300; 
+	text-transform: uppercase;
+	font-size: 30px;
+	letter-spacing:3px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.top > div > div > div > h1 {
+	border: 2px solid white;
+	border-radius: 4px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300; 
+	text-transform: uppercase;
+	font-size: 30px;
+	letter-spacing:3px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.color-grey {
+	background-color: #222;
 }
 
 
-/* Animation */
-nav ul li a:before {
-  content:"";
-  display:block;
-  position:absolute;
-  left:0;
-  bottom:70px;
-  height:5px;
-  width:0;
-  background:#999;
-  -webkit-transition:width .25s;
-  -moz-transition:width .25s;
-  -ms-transition:width .25s;
-  -o-transition:width .25s;
-  transition:width .25s;
+.navbar-default {
+	background-color: #f8f8f8;
+	border-color: #FFFFFF;
+	margin-top: -43px;
+	border-width: 0px;
+}
+
+.portfolio > div > h2 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+nav.navbar-collapse.collapse.cl-effect-5 {
+	margin-left: 12%;
+}
+
+p {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400; 
+}
+
+#pageContent > div > div > h3 {
+	font-size: 25px;
+	font-weight: 300;
+	color: #555;
+}
+
+#pageContent > div > div > h2 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 
-/* Forces last icons to align correctly */
-nav.align-right li.last > a:after,nav.align-right li:last-child > a:after {
-  display:block;
-}
 
-/* Active Link */
-nav ul li a:hover,nav ul li.active a {
-  color:#999;
-  text-decoration:none;
-}
-
-/* Hover Settings */
-nav ul li a:hover:before,nav ul li.active a:before {
-  width:100%;
-  text-decoration:none;
-}
-
-/* Hide Non-Hover Display */
-nav ul li.last > a:after,nav ul li:last-child > a:after,nav.align-right li:first-child a:after {
-  display:none;
-  text-decoration:none;
-}
-
-/* Adjustments */
-@media screen and max-width 768px {
-  nav ul li {
-    float:none;
-    display:block;
-  }
-
-  /* Shadow on Links */
-  nav ul li a {
-    width:100%;
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    box-sizing:border-box;
-    border-bottom:1px solid #fb998c;
-  }
-
-  /* Last link clear boarder */
-  nav ul li.last > a,nav ul li:last-child > a {
-    border:0;
-  }
-
-  /* Hide stuff */
-  nav ul li a:after,nav ul li a:before {
-    display:none;
-  }
+.item > blockquote > div > div> i, .item > blockquote > div > div> i:before {
+	color: #999;
+	font-weight: 300;
+	font-size: 15px;
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ////////////////////////////////////////////////////////////////
-/*                      SUB NAVBAR SETTINGS
-/* ///////////////////////////////////////////////////////////// */
-
-
-/* Hides second level menus until hover over */
-nav ul ul {
-  display: none;
-  text-decoration:none;
+/* carousel */
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
 }
 
-/* Shows second level menus on hover over */
-nav ul li:hover > ul {
-  display: block;
-  text-decoration:none;
-}
-
-/* Keeps shading on sub menu links when hobvring on - sexy */
-nav ul li:hover {
-  background: #4b545f;
-  background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
-  background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
-  background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
-  text-decoration:none;
-}
-
-/* Makes the submenu links white */
-nav ul li:hover a {
-  text-decoration:none;
-  color: #fff;
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  	background: none;
+  	color: #999;
+  	font-size: 2.3em;
+  	text-shadow: none;
+  	margin-top: -15px;
+  	margin-right: -70px;
+	margin-left: -70px;
 }
 
 
-nav ul ul {
-  background: #5f6975; border-radius: 0px; padding: 0;
-  position: absolute; top: 100%;
-}
-nav ul ul li {
-  float: none; 
-  border-top: 1px solid #6b727c;
-  border-bottom: 1px solid #575f6a; position: relative;
-}
-nav ul ul li a {
-  padding: 15px 40px;
-  color: #fff;
-}   
-nav ul ul li a:hover {
-  background: #4b545f;
+.carousel-control {
+width: 19%;
+padding: 50px;
 }
 
-nav ul ul ul {
-  position: absolute; left: 100%; top:0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ////////////////////////////////////////////////////////////////
-/*                         BACKING THEMES
-/* ///////////////////////////////////////////////////////////// */
-
-.dark {
-  background-image: url('http://chromahills.net/assets/img/backdrop.png');
-  background-size: 100%;
-  background-position: center center;
-  color: #fff;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-left: -20vw;
-  margin-right: -20vw;
-  overflow-x: hidden;
-}
-
-.blue {
-background-color: #3686be;
-color: #ffffff;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-left: -20vw;
-  margin-right: -20vw;
-  overflow-x: hidden;
-}
-
-.grey {
-  background: #5C5C5C;
-  color: #fff;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-left: -20vw;
-  margin-right: -20vw;
-  overflow-x: hidden;
-}
-
-.white {
-  background: #fff;
-  color: #666;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-left: -20vw;
-  margin-right: -20vw;
-  overflow-x: hidden;
-}
-      
-  </style>
-
-
-
-
-
-
-
-
-
-/* ////////////////////////////////////////////////////////////////
-/*                         FOOTER STUFF
-/* ///////////////////////////////////////////////////////////// */
-
-footer {
-  position: fixed;
-  left: 50px;
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
   bottom: 0px;
-  height: 30px;
-  width: 10%;
+  margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
 }
 
-/* IE 6 */
-* html footer {
-   position:absolute;
-   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+    color: #555;
+}
+
+
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+    }
+    
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) { 
+    
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+    
+    #quote-carousel .carousel-indicators {
+        bottom: -20px !important;  
+    }
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 15px;
+        height: 15px;
+    }
+    #quote-carousel .carousel-indicators li.active {
+        margin: 0px 5px;
+        width: 20px;
+        height: 20px;
+    }
 }
 
 
@@ -336,101 +230,125 @@ footer {
 
 
 
-/* ////////////////////////////////////////////////////////////////
-/*                        PORTFOLIO STUFF
-/* ///////////////////////////////////////////////////////////// */
 
 
+/* Every Day Crap*/
 
-
-.blue div {
-  margin: 15px;
-  float: left;
-  width: 300px;
-  border-radius: 5px;
-
+ul
+{
+    list-style-type: none;
+}
+li {
+    display: inline-block;
+    padding-left: 10px;
 }
 
-.back {
-  max-width: 300px;
-  height: 150px;
-  box-shadow: inset 0 20px 150px #000;
-  background: rgba(0,0,0,0);
-  color: #fff;
-  font-size: 3em;
-  text-align: center;
+body {
   
+  /* Stops people selecting stuff on site*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.back:hover:after{
-  text-shadow: #777 1px 2px;
+/* Icon */
+
+.icon {
+	position: relative;
 }
 
-.back:hover {
-  box-shadow: inset 0px 20px 220px #000;
+.icon:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
 }
 
-/* MineReach */
-.Minereach {
-  background: url(http://test.luke.sx/LUKESITE/images/work/Minereach.png) center center ;
-  background-size: cover;
-}
-.Minereach:hover:after {
-  content: "Minereach";
-}
-
-/* FancyGamer */
-.FancyGamer {
-  background: url(http://test.luke.sx/LUKESITE/images/work/FancyGamer.png) center center no-repeat;
-  background-size: cover;
-}
-.FancyGamer:hover:after {
-  content: "FancyGamer";
-}
-
-/* SlammerMC */
-.SlammerMC {
-  background: url(http://test.luke.sx/LUKESITE/images/work/SlammerMC.png) center center no-repeat;
-  background-size: cover;
-}
-.SlammerMC:hover:after {
-  content: "SlammerMC";
-  
+.icon.circle {
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	border: 0;
+	border-radius: 100%;
+	display: inline-block;
+	font-size: 3.25em;
+	height: 2.25em;
+	left: 0;
+	line-height: 2.25em;
+	text-align: center;
+	text-decoration: none;
+	top: 0;
+	width: 2.25em;
 }
 
+	.icon.circle:hover {
+		top: -0.2em;
+	}
 
+	.icon.circle.fa-twitter {
+		background: #70aecd;
+		color: white;
+	}
 
+		.icon.circle.fa-twitter:hover {
+			background: #7fb7d2;
+		}
 
+	.icon.circle.fa-stack-overflow {
+		background: #F47920;
+		color: white;
+	}
 
+		.icon.circle.fa-stack-overflow:hover {
+			background: #F38C41;
+		}
 
+	.icon.circle.fa-envelope-o {
+		background: #db6b67;
+		color: white;
+	}
 
+		.icon.circle.envelope-o:hover {
+			background: #E79491;
+		}
 
+	.icon.circle.fa-github {
+		background: #dcad8b;
+		color: white;
+	}
 
+		.icon.circle.fa-github:hover {
+			background: #e1b89b;
+		}
 
+	.icon.circle.fa-steam {
+		background: #000000;
+		color: white;
+	}
 
+		.icon.circle.fa-steam:hover {
+			background: #474747;
+		}
 
-
-
-
-
-
-
-
-/* ////////////////////////////////////////////////////////////////
-/*                         FONTS & SIZING
-/* ///////////////////////////////////////////////////////////// */
-
-
-h1 {
-  color: #fff;
-  font-family: 'Lobster Two', cursive;
-  font-size: 5em;
-  text-align: center;
+.icon.feature {
+	cursor: default;
+	display: block;
+	margin: 0 0 1.5em 0;
+	opacity: 0.35;
+	text-align: center;
 }
-h2 {
-  color: #fff;
-  font-family: 'Lobster Two', cursive;
-  font-size: 2em;
-  text-align: center;
-}
 
+	.icon.feature:before {
+		font-size: 5em;
+		line-height: 1em;
+	}
+
+.icon > .label {
+	display: none;
+}
