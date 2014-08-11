@@ -1,67 +1,110 @@
-﻿<?php 
-    /*
-        Author   :      Luke Brown
-        Website  :      http://luke.sx
-        Created  :      July 2014
-        Contact  :      me@luke.sx
-    */
- ?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../favicon.ico">
+
+		<title>Home</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
+
+
+		<link rel="stylesheet" type="text/css" href="assets/css/component.css" />
+		<script src="assets/js/modernizr.custom.js"></script>
+
+
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/js/script.js"></script>
 
 
 
-<title>Luke Brown - Offical Website</title>
-<?php include 'assets/header.php'; ?>
+	</head>
+	<body>
 
 
-    <div class="dark"><div class="container">
-        <?php include 'assets/nav.php'; ?>
-        <h1>Luke Brown - Freelance Developer</h1>
-        <h2>Coder, Web Developer, System Admin, Ninja</h2>
-
-    </div><!--contain--></div><!--dark-->
-</head>
-
-    <div class="grey"><div class="container">
-
-
-Hey there, I'm still working on stuff.
-
-    </div><!--contain--></div><!--dark-->
+		<!-- Main jumbotron for a primary marketing message or call to action -->
+		<div class="jumbotron top">
+			<div class="container">
+				<div class="row"> 
+					<div class="col-md-6 col-md-offset-3">	
+						<h1>Luke Brown Development</h1>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
-    <div class="white"><div class="container">
-s
-    </div><!--contain--></div><!--dark-->
+		<div class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".cl-effect-5">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand navbar-toggle" data-toggle="collapse" href="#">Navigation ></a>
+				</div>
+			</div>
+
+			<section class="color-grey">
+				<div class="container">
+					<nav class="navbar-collapse collapse cl-effect-5">
+						<a href="#p1"><span data-hover="Home">Home</span></a>
+						<a href="#p2"><span data-hover="Work">Work</span></a>
+						<a href="#p3"><span data-hover="Play">Play</span></a>
+						<a href="#p4"><span data-hover="Info">Info</span></a>
+					</nav>
+				</div>
+			</section>
+		</div>
+
+		<div class="container">
 
 
-    <div class="blue"><div class="container">
+			<div id="rounded">
+				<div id="main" class="container">
+		
+				    <div class="clear"></div>
+	    
+					<div id="pageContent">
+						
+						<?php include 'pages/1.html' ?>
 
-<div class="back Minereach"></div>
-<div class="back FancyGamer"></div>
-<div class="back SlammerMC"></div>
-  
+	    			</div>
+	    
+	    			<div class="clear"></div>
 
-        </div><!--contain--></div><!--dark-->
-
-
-    <div class="white"><div class="container">
-    Contact me here!
-    </div><!--contain--></div><!--dark-->
+	    		</div>
+				
+			</div> <!-- /rounded -->
+		</div> <!-- /container -->
 
 
-<body>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="../hardhat/bootstrap/js/bootstrap.min.js"></script>
-  </body>
+		<div class="jumbotron bottom">
+			<div class="container">
+				<div class="row"> 
+					<div class="col-md-6 col-md-offset-3">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+	</body>
 </html>
-
-
-</div>
-
-<div class="push"></div>
-</div>
-<?php include 'assets/footer.php' ?>
