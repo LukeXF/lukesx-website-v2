@@ -31,5 +31,4 @@ $totalLife = round($myLife,2) . "%";
 //
 ?>
 
-<h4>I've been alive for <b><?php echo $convertToInt ?></b> days and I've have lived <b><?php echo $totalLife ?></b> of my life.
-</h4>
+I've been alive for <b><?php echo $convertToInt ?></b> days and I've have lived <b><?php echo $totalLife ?></b> of my life.

@@ -1,14 +1,68 @@
 <div class="row portfolio">
+	<h2>My Stats</h2>
 	<div class="col-md-6">
+		<h4>
+			<div id="mydiv"></div> and the last song I listened to was <b id="display"><i>Song</i></b> by <b id="display2"><i>Artist</i></b>. 
+			<br><br>
+			Since July 2014 I have pressed <b id="display"><i>Keys</i></b> Keys and <b id="display"><i>clicks</i></b> Mouse clicks.<br><br>
+			I have downloaded <b id="display"><i>DownGB</i></b> and uploaded <b id="display"><i>UpGB</i></b> in the last <b id="display"><i>TimeFromAugust</i></b>.
+		</h4>
+		
+	</div>
+	<div class="col-md-6">
+		<h4>
+			I have a total of <b id="display2"><i>TFollowers</i></b> followers on Twitter and I have posted <b id="display2"><i>TPosts</i></b> posts to date algon with <b id="display2"><i>TFavourites</i></b>
+			<br><br>
+			I have <b id="display2"><i>SGames</i></b> on steam and my last played game was <b id="display2"><i>Sgame</i></b>, my total playing time on <b id="display2"><i>Sgame</i></b> is <b id="display2"><i>Shour1</i></b> and my total playing time is <b id="display2"><i>Shour2</i></b>. Of which I have played <b id="display2"><i>Shour3</i></b> in the last two weeks.
+		</h4>
+		
+	</div>
 
-		<h2>Some Stats</h2>
 
-		<div id="mydiv"><br><br><br><br><br><br><br><br><br><br><br><br> </div>
 		<script type="text/javascript">
-			$("#mydiv").load("stats.php");
+			$("#mydiv").load("pages/stats.php");
 		</script>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function($){
+				var firsttrack;
+				var counter = 0;
+				var flag = 1;
+					$.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rj&api_key=0a93ef2200190981879654a7fa597639&format=json', 
+				function(data){
+					$.each(data.recenttracks.track, function(i,data){
+						if(counter != flag){
+							$("#display").html(data.name);
+							counter = flag;
+						} else {
+							return;
+						}		
+					});
+				});	
+			});
+		</script>
+
+
 	</div>
 </div>
+<hr>
+<div class="row portfolio">
+	<h2>My Skills</h2>
+	<div class="col-md-12">
+		<h4>
+			I am fully proficient <b>HTML</b> and <B>CSS</B> languages. I have a flexible understanding of <b>PHP</b> and I am gradually picking up knowledge of <b>JavaScript</b>. I have worked a lot around frameworks such as Laravel, jQuery and Bootstrap to name a few. Other projects required me to use <b>CMS</b> system such as <b>Wordpress</b>, <b>Concrete5</b>, <b>Enjin</b> and my own custom developed content management system. I have some knowledge in <b>XML</b>, <b>JSON</b>, <b>Java</b> and <b>Python</b>.
+			<br><br>
+			Finally, I also have a very confident understanding of <b>Linux</b> and <b>Windows</b> server side operating systems and I am fully capable of setting up, managing and distributing projects onto <b>servers</b> of any scale or management.
+		</h4>
+		
+	</div>
+
+
+
+
+	</div>
+</div>
+
 
 
 <div class="row portfolio">
