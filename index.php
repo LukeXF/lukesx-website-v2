@@ -8,7 +8,7 @@
 		<meta name="author" content="">
 		<link rel="icon" href="../../favicon.ico">
 
-		<title>Home</title>
+		<title>Luke Brown Development</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">

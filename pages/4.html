@@ -4,16 +4,16 @@
 		<h4>
 			<div id="mydiv"></div> and the last song I listened to was <b id="display"><i>Song</i></b> by <b id="display2"><i>Artist</i></b>. 
 			<br><br>
-			Since July 2014 I have pressed <b id="display"><i>Keys</i></b> Keys and <b id="display"><i>clicks</i></b> Mouse clicks.<br><br>
-			I have downloaded <b id="display"><i>DownGB</i></b> and uploaded <b id="display"><i>UpGB</i></b> in the last <b id="display"><i>TimeFromAugust</i></b>.
+			Since July 2014 I have pressed <b id="display"><i>.</i></b> Keys and <b id="display"><i>c.</i></b> Mouse clicks.<br><br>
+			I have downloaded <b id="display"><i>.</i></b> and uploaded <b id="display"><i>.</i></b> in the last <b id="display"><i>.</i></b>.
 		</h4>
 		
 	</div>
 	<div class="col-md-6">
 		<h4>
-			I have a total of <b id="display2"><i>TFollowers</i></b> followers on Twitter and I have posted <b id="display2"><i>TPosts</i></b> posts to date algon with <b id="display2"><i>TFavourites</i></b>
+			I have a total of <b id="display2"><i>.</i></b> followers on Twitter and I have posted <b id="display2"><i>.</i></b> posts to date algon with <b id="display2"><i>.</i></b>
 			<br><br>
-			I have <b id="display2"><i>SGames</i></b> on steam and my last played game was <b id="display2"><i>Sgame</i></b>, my total playing time on <b id="display2"><i>Sgame</i></b> is <b id="display2"><i>Shour1</i></b> and my total playing time is <b id="display2"><i>Shour2</i></b>. Of which I have played <b id="display2"><i>Shour3</i></b> in the last two weeks.
+			I have <b id="display2"><i>.</i></b> on steam and my last played game was <b id="display2"><i>.</i></b>, my total playing time on <b id="display2"><i>.</i></b> is <b id="display2"><i>.</i></b> and my total playing time is <b id="display2"><i>.</i></b>. Of which I have played <b id="display2"><i>.</i></b> in the last two weeks.
 		</h4>
 		
 	</div>
@@ -24,15 +24,40 @@
 		</script>
 
 		<script type="text/javascript">
-			jQuery(document).ready(function($){
+			jQuery(document).ready(function($) {
+			    var firsttrack;
+			    var counter = 0;
+			    var flag = 1;
+			    $.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=LukeBrown1509&api_key=0a93ef2200190981879654a7fa597639&format=json',
+			        function(data) {
+			            $.each(data.recenttracks.track, function(i, data) {
+			                if (counter != flag) {
+			                    var artist = data.artist;
+			                    $("#display").html(data.name);
+			                    $("#display2").html(artist['#text']);
+			                    
+			                    counter = flag;
+			                } else {
+			                    return;
+			                }
+			            });
+			        });
+			});
+
+
+
+		</script>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function($lol){
 				var firsttrack;
 				var counter = 0;
 				var flag = 1;
-					$.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rj&api_key=0a93ef2200190981879654a7fa597639&format=json', 
+					$lol.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=LukeBrown1509&api_key=0a93ef2200190981879654a7fa597639&format=json', 
 				function(data){
-					$.each(data.recenttracks.track, function(i,data){
+					$lol.each(data.recenttracks.track, function(i,data){
 						if(counter != flag){
-							$("#display").html(data.name);
+							$lol("#display2").html(data.artist./#name);
 							counter = flag;
 						} else {
 							return;
