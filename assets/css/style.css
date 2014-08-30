@@ -112,7 +112,7 @@ p {
 
 
 .item > blockquote > div > div> i, .item > blockquote > div > div> i:before {
-	color: #999;
+	color: #222;
 	font-weight: 300;
 	font-size: 15px;
 }
@@ -359,4 +359,24 @@ body {
 
 .icon > .label {
 	display: none;
+}
+
+.col-md-4 > a > h4 {
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.ismall {
+	font-size: 13px !important;
+	display: -webkit-box;
+	margin-top: -4px;
+	color: #777 !important;
+	font-weight: bold;
+}
+
+.col-md-4 > a > h4 {
+	color: #777;
 }
