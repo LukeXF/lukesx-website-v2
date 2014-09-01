@@ -1,3 +1,5 @@
+<?php 
+
 function getTwitterFollowers($screenName = 'DiamondXF')
 {
     require_once('Cache.php');
@@ -36,3 +38,5 @@ function getTwitterFollowers($screenName = 'DiamondXF')
   
     return $numberOfFollowers;
 }
+
+?>

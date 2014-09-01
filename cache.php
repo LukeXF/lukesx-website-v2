@@ -1,3 +1,4 @@
+<?
 /**
 * @desc Class that implements the Cache functionality
 */
@@ -61,3 +62,4 @@ class Cache
     }
   
 }
+?>
