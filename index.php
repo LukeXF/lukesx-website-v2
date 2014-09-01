@@ -41,7 +41,7 @@
 						// set correct path!
 						require_once('getTwitterFollowers.php');
 						// change screen name to yours
-						getTwitterFollowers('DiamondXF');
+						echo getTwitterFollowers('DiamondXF');
 						?></h1>
 					</div>
 				</div>
