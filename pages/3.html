@@ -1,8 +1,232 @@
-<div class="row portfolio">
-	<div class="col-md-12 center" style="padding:200px;">
+<div class="container">
+<div class="row portfolio" style="min-height:600px; margin-top: 50px;">
+	<div  class="col-sm-3">
+		<div class="sidebar-nav">
+			<div class="navbar sidelenav navbar-default" role="navigation">
+			<h2>Playground</h2>
+			<hr/>
+				<div class="navbar-collapse collapse sidebar-navbar-collapse"> <!-- required for floating -->
+				<!-- Nav tabs -->
+					<ul class="nav nav-tabs tabs-left">
+						<li class="active"><a href="#welcome" data-toggle="tab">Welcome</a></li>
+						<li><a href="#linkshort" data-toggle="tab">Link Shortener</a></li>
+						<li><a href="#ramconvert" data-toggle="tab">RAM Conversion</a></li>
+						<li><a href="#usefulcommands" data-toggle="tab">Useful Commands</a></li>
+						<li><a href="#mcuuid" data-toggle="tab">Minecraft UUID</a></li>
+						<li><a href="#start" data-toggle="tab">Project Start Files</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-7">
 
-		<h2>Coming Soon</h2>
-		<h2>I'm still working on this area</h2>
-		
+	<!-- Tab panes -->
+		<div class="tab-content">
+			<div class="tab-pane active" id="welcome">
+				<h3>Hi there!</h3>
+				<p>So a brief explanation of this page is a simple summary of all the little useful tools I have needed in the past but always used other sites and applications for it to work.</p>
+				<p>What this demonstrates apart from providing a useful and easily accessible tool-set for myself and anyone else whom wishes to use this, is it shows my skills and provides a first hand example of what I can do.</p>
+				<p>Got an idea, then please feel free to <a href="mailto:me@luke.sx">contact me</a> and if I think it will be useful and practical then I would be more than happy to add it.</p>
+			</div>
+			<div class="tab-pane" id="linkshort">
+				<h3>Simple and sweet.</h3>
+
+				<p>I got asked if I could make a super simple link shortner. But saw potential to make it much more useful; Feel fork my code over on GitHub or shorten a link down below. Using MIT Licensing. If you have any suggestions or issues with the any of the projects then feel free to raise an issue or a request a pull of the fixed version.</p>
+				<form class="bs-example bs-example-form" role="form">
+					<div class="row">
+						<div class="col-md-2 col-md-offset-1">
+							<a class="btn btn-success" href="https://github.com/LukeXF/SimpleLinkShortener" target="_blank"><i class="fa fa-github fa-lg"> </i>&nbsp;&nbsp;Source</a>
+						</div>
+						<div class="col-md-8">
+							<div class="input-group">
+								<input type="text" placeholder="HTTP://" class="form-control">
+								<div class="input-group-btn">
+									<button type="button" class="btn btn-default" tabindex="-1">Coming Soon</button>
+								</div>
+							</div><!-- /.input-group -->
+						</div><!-- /.col-lg-6 -->
+					</div><!-- /.row -->
+				</form>
+			</div>
+			<div class="tab-pane" id="ramconvert">
+				<h3>Convert RAM</h3>
+				<p>While working with server pretty much every day, RAM allocation becomes a largely used featured in the day to day running of servers. I have adapted this script to provide a simple and easily to use tool to convert from the 4th smallest RAM values.</p>
+				<div class="row">
+					<div class="col-md-10">
+						<script language="JavaScript">
+							<!--
+							function byteConverter(){
+							document.converter.kb.value = document.converter.byte.value / 1024
+							document.converter.mb.value = document.converter.byte.value / (1024*1024)
+							document.converter.gb.value = document.converter.byte.value / (1024*1024*1024)
+							}
+
+							function kbConverter(){
+							document.converter.byte.value = document.converter.kb.value * 1024
+							document.converter.mb.value = document.converter.kb.value / 1024
+							document.converter.gb.value = document.converter.kb.value / (1024*1024)
+							}
+
+							function mbConverter(){
+							document.converter.byte.value = document.converter.mb.value * 1024 * 1024
+							document.converter.kb.value = document.converter.mb.value * 1024
+							document.converter.gb.value = document.converter.mb.value / 1024
+							}
+							function gbConverter(){
+							document.converter.byte.value = document.converter.gb.value * 1024 * 1024 * 1024
+							document.converter.kb.value = document.converter.gb.value * 1024 * 1024
+							document.converter.mb.value = document.converter.gb.value * 1024
+							}
+							//-->
+						</script>
+
+						<form name="converter">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="input-group">
+											<input type="text" name="byte" onChange="byteConverter()" class="form-control">
+										<span class="input-group-addon">&nbsp;B&nbsp;&nbsp;</span>
+									</div>
+									<div class="input-group">
+											<input type="text" name="kb" onChange="kbConverter()" class="form-control">
+										<span class="input-group-addon">KB</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input-group">
+											<input type="text" name="mb" onChange="mbConverter()" class="form-control">
+										<span class="input-group-addon">MB</span>
+									</div>
+									<div class="input-group">
+											<input type="text" name="gb" onChange="gbConverter()" class="form-control">
+										<span class="input-group-addon">GB</span>
+									</div>
+								</div>
+							</div>
+							<a class="btn btn-success" href="https://gist.github.com/LukeXF/d83941413cf56743e885" target="_blank"><i class="fa fa-github fa-lg"> </i>&nbsp;&nbsp;View Gist</a>
+						    <input type="button" class="btn btn-primary" value="Convert!" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="usefulcommands">
+				<h3>Useful CentOS (Linux) commands</h3>
+				<p>A list of useful Linux commands for my personal reference as I usually forget how either they are structured or formatted.</p>
+
+				<b>Compress a tar directory</b>
+				<div class="input-group">
+					<span class="input-group-addon">-zcvf</span>
+					<input type="text" class="form-control" value="tar -zcvf file.tar.gz">
+				</div>
+
+				<b>Extract a tar directory</b>
+				<div class="input-group">
+					<span class="input-group-addon">-zxvf</span>
+					<input type="text" class="form-control" value="tar -zxvf file.tar.gz">
+				</div>
+
+				<b>Assign user and group</b>
+				<div class="input-group">
+					<span class="input-group-addon">chown</span>
+					<input type="text" class="form-control" value="chown -R apache:apache /var/www/html">
+				</div>
+
+				<b>Assign permission</b>
+				<div class="input-group">
+					<span class="input-group-addon">chmod</span>
+					<input type="text" class="form-control" value="chmod 775 -R /var/www/html">
+				</div>
+
+				<b>Secure copy protocol</b>
+				<div class="input-group">
+					<span class="input-group-addon">scp</span>
+					<input type="text" class="form-control" value="scp file.tar.gz root@127.0.0.1:/home">
+				</div>
+			</div>
+
+			<div class="tab-pane" id="mcuuid">
+				<h3>Minecraft UUID Converter.</h3>
+				<p>I can't explain how useful this actually is, for many months I was looking for a way to convert UUID's form outside of Java. This particular way uses the API from Minecraft.net and I have updated this three times to make it the most efficient. I can also convert from UUID to Username if need be.</p>
+				<iframe src="http://luke.sx/pages/uuid.php" height="400px" width="100%" style="border:0" seamless></iframe>
+
+			</div>
+
+			<div class="tab-pane" id="start">
+				<h3>I'll be adding this later on.</h3>
+				<p></p>
+			</div>
+		</div>
+	</div>
+
+		<head><link rel="stylesheet" href="bootstrap.vertical-tabs.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	</div>
 </div>
+
+<style type="text/css">
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+  }
+  .sidebar-nav .navbar ul:not {
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+.sidelenav {
+border: 1px solid rgba(175, 175, 175, 0.33);
+margin-left: -500px;
+padding-left: 500px;
+margin-top: 25px;
+margin-bottom: -2px;
+/* padding-bottom: 500px; */
+}
+li {
+display: inline-block;
+padding-left: 0px;
+}
+.sidelenav > h2 {
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+color: #555;
+cursor: default;
+background-color: #fff;
+border: 1px solid #ddd;
+border-right-color: transparent;
+border-left-color: transparent;
+margin-right: 0px;
+}
+.nav-tabs>li>a {
+margin-right: 1px;
+line-height: 1.42857143;
+border: 1px solid transparent;
+border-radius: 4px 4px 0 0;
+margin-left: -500px;
+padding-left: 500px;
+}
+.sidebar-nav .navbar li a {
+color: #999;
+}
+.sidelenav > hr {
+margin-left: -500px;
+}
+.input-group {
+margin-bottom: 8px;
+}
+</style>

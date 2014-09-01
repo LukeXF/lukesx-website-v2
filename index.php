@@ -36,7 +36,13 @@
 			<div class="container">
 				<div class="row"> 
 					<div class="col-md-6 col-md-offset-3">	
-						<h1>Luke Brown Development</h1>
+						<h1>Luke Brown Development						
+						<?php
+						// set correct path!
+						require_once('getTwitterFollowers.php');
+						// change screen name to yours
+						getTwitterFollowers('DiamondXF');
+						?></h1>
 					</div>
 				</div>
 			</div>
